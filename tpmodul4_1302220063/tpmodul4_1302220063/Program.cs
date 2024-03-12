@@ -34,6 +34,52 @@ class KodePos
         }
     }
 }
+
+class DoorMachine
+{
+    // Enum untuk merepresentasikan state pintu
+    enum DoorState
+    {
+        Terkunci,
+        Terbuka
+    }
+
+    private DoorState currentState; // Menyimpan state pintu saat ini
+
+    // Constructor, state awal adalah Terkunci
+    public DoorMachine()
+    {
+        currentState = DoorState.Terkunci;
+        UpdateStateOutput();
+    }
+
+    // Method untuk mengubah state pintu menjadi Terbuka
+    public void Buka()
+    {
+        currentState = DoorState.Terbuka;
+        UpdateStateOutput();
+    }
+
+    // Method untuk mengubah state pintu menjadi Terkunci
+    public void Kunci()
+    {
+        currentState = DoorState.Terkunci;
+        UpdateStateOutput();
+    }
+
+    // Method untuk menampilkan output sesuai dengan state saat ini
+    private void UpdateStateOutput()
+    {
+        if (currentState == DoorState.Terkunci)
+        {
+            Console.WriteLine("Pintu terkunci");
+        }
+        else if (currentState == DoorState.Terbuka)
+        {
+            Console.WriteLine("Pintu tidak terkunci");
+        }
+    }
+}
 class Program
 {
     static void Main(string[] args)
@@ -53,5 +99,11 @@ class Program
         Console.WriteLine("Kode Pos untuk Kelurahan Maleer: " + kodePos.GetKodePos("Maleer"));
         Console.WriteLine("Kode Pos untuk Kelurahan Samoja: " + kodePos.GetKodePos("Samoja"));
         Console.WriteLine();
+        // Membuat objek DoorMachine
+        DoorMachine door = new DoorMachine();
+
+        // Simulasi perubahan state
+        door.Kunci(); // Mengubah state menjadi Terkunci lagi
+        door.Buka(); // Mengubah state menjadi Terbuka lagi
     }
 }
