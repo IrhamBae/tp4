@@ -85,7 +85,7 @@ class Program
     {
         KodePos kodePos = new KodePos();
 
-        // Contoh pemanggilan
+        //pemanggilan
         Console.WriteLine("Kode Pos untuk Kelurahan Batununggal: " + kodePos.GetKodePos("Batununggal"));
         Console.WriteLine("Kode Pos untuk Kelurahan Kujangsari: " + kodePos.GetKodePos("Kujangsari"));
         Console.WriteLine("Kode Pos untuk Kelurahan Mengger: " + kodePos.GetKodePos("Mengger"));
@@ -101,7 +101,7 @@ class Program
         // Membuat objek DoorMachine
         DoorMachine door = new DoorMachine();
 
-        // Simulasi perubahan state
+        // perubahan state
         door.Kunci(); // Mengubah state menjadi Terkunci lagi
         door.Buka(); // Mengubah state menjadi Terbuka lagi
     }
