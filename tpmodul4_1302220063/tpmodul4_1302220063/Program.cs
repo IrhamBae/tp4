@@ -37,7 +37,6 @@ class KodePos
 
 class DoorMachine
 {
-    // Enum untuk merepresentasikan state pintu
     enum DoorState
     {
         Terkunci,
